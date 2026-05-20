@@ -44,7 +44,7 @@ cd barlin-scene
 xdg-open index.html   # or open index.html on macOS
 ```
 
-Or visit the GitHub Pages site (link added on first deploy).
+Or watch it live at **<https://holbizmetrics.github.io/barlin-scene/>**.
 
 ## License
 
