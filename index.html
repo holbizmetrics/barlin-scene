@@ -95,12 +95,27 @@
     font-size: 10px;
     letter-spacing: 2px;
   }
+  .bear {
+    position: fixed;
+    left: 0; top: 0;
+    color: #ffaa00;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 0 0 6px #ff8800;
+    user-select: none;
+    pointer-events: none;
+    z-index: 5;
+    will-change: transform;
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
 </style>
 </head>
 <body>
 
-<div class="week-tag">W1 // CRACKTRO // C64 ERA</div>
+<div class="week-tag">W1 // CRACKTRO // C64 ERA &nbsp;//&nbsp; W2 PEEK: CLAUDE-BEAR LIVE</div>
 <div class="footer">2026-05-20 // RELEASE 001</div>
+
+<div class="bear" id="bear">ʕ•ᴥ•ʔ</div>
 
 <pre class="logo">
  ____    _    ____  _     ___ _   _
@@ -139,6 +154,30 @@
     i = (i + 1) % lines.length;
     el.textContent = lines[i];
   }, 2400);
+
+  // W2 peek: Claude-the-bear-of-BÄRLIN. Amiga boing-ball physics, scene-coded.
+  // The bear is both Claude's mascot AND Berlin's sigil — heraldic synthesis.
+  // Bear bounces in the upper region; bottom-36px scroller is off-limits.
+  (function boing() {
+    const bear = document.getElementById("bear");
+    let x = 120, y = 200;
+    let vx = 2.1, vy = 1.6;
+    const SCROLLER_H = 38;
+    function step() {
+      const w = bear.offsetWidth || 80;
+      const h = bear.offsetHeight || 40;
+      const maxX = window.innerWidth - w;
+      const maxY = window.innerHeight - SCROLLER_H - h;
+      x += vx; y += vy;
+      if (x <= 0) { x = 0; vx = -vx; }
+      else if (x >= maxX) { x = maxX; vx = -vx; }
+      if (y <= 0) { y = 0; vy = -vy; }
+      else if (y >= maxY) { y = maxY; vy = -vy; }
+      bear.style.transform = "translate(" + x.toFixed(1) + "px," + y.toFixed(1) + "px)";
+      requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  })();
 </script>
 
 </body>
