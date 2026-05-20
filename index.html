@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BÄRLIN presents VERBATIM for Early AI-Dopters</title>
+<style>
+  html, body {
+    margin: 0; padding: 0; height: 100%;
+    background: #000; color: #c0c0c0;
+    font-family: "Courier New", "Lucida Console", monospace;
+    overflow: hidden;
+  }
+  body {
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    image-rendering: pixelated;
+  }
+  pre.logo {
+    color: #ff00ff;
+    font-size: 14px; line-height: 1.0;
+    margin: 0 0 1em 0;
+    text-shadow: 0 0 4px #ff00ff;
+    animation: hueshift 8s linear infinite;
+  }
+  @keyframes hueshift {
+    0%   { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+  }
+  .header {
+    color: #ffff00;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    animation: blink 1.6s steps(2, end) infinite;
+  }
+  @keyframes blink {
+    50% { opacity: 0.2; }
+  }
+  .meta {
+    color: #00ffff;
+    font-size: 12px;
+    margin-bottom: 2em;
+    letter-spacing: 1px;
+  }
+  .audit-line {
+    color: #00ff00;
+    font-size: 12px;
+    background: rgba(0, 64, 0, 0.15);
+    padding: 4px 12px;
+    border-top: 1px solid #008800;
+    border-bottom: 1px solid #008800;
+    margin: 1em 0;
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: monospace;
+  }
+  .scroller-frame {
+    width: 100%;
+    height: 36px;
+    overflow: hidden;
+    border-top: 2px solid #ff00ff;
+    border-bottom: 2px solid #ff00ff;
+    background: #110011;
+    position: fixed;
+    bottom: 0; left: 0;
+  }
+  .scroller {
+    display: inline-block;
+    white-space: nowrap;
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 36px;
+    padding-left: 100%;
+    animation: scroll 90s linear infinite;
+    letter-spacing: 2px;
+    text-shadow: 0 0 3px #ff66ff;
+  }
+  @keyframes scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  .footer {
+    position: fixed;
+    top: 8px; right: 12px;
+    color: #555;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+  .week-tag {
+    position: fixed;
+    top: 8px; left: 12px;
+    color: #ff0066;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+</style>
+</head>
+<body>
+
+<div class="week-tag">W1 // CRACKTRO // C64 ERA</div>
+<div class="footer">2026-05-20 // RELEASE 001</div>
+
+<pre class="logo">
+ ____    _    ____  _     ___ _   _
+| __ )  / \  |  _ \| |   |_ _| \ | |
+|  _ \ / _ \ | |_) | |    | ||  \| |
+| |_) / ___ \|  _ <| |___ | || |\  |
+|____/_/   \_\_| \_\_____|___|_| \_|
+</pre>
+
+<div class="header">PRESENTS</div>
+<div class="meta">V E R B A T I M &nbsp; / / &nbsp; F O R &nbsp; E A R L Y &nbsp; A I - D O P T E R S</div>
+
+<div class="audit-line" id="audit">
+  <span id="audit-content">[2026-05-20T22:56:00Z] action=draft_emitted icp_phrases_cited=3 substrate_verbatim=true ...</span>
+</div>
+
+<div class="scroller-frame">
+  <div class="scroller">
+    BÄRLIN PRESENTS VERBATIM &nbsp;***&nbsp; FOR THE EARLY AI-DOPTERS &nbsp;***&nbsp; ASSEMBLED IN BERLIN ON THE 17TH OF JUNE 2026 &nbsp;***&nbsp; YOU ARE WATCHING RELEASE 001 OF FOUR &nbsp;***&nbsp; THIS IS A CRACKTRO &nbsp;***&nbsp; NEXT WEEK IT BECOMES AN INTRO &nbsp;***&nbsp; THE WEEK AFTER A DEMO &nbsp;***&nbsp; AND THEN WE ARRIVE &nbsp;***&nbsp; THE THESIS IS SIMPLE: IF YOU CANNOT GREP THE LIE THE AGENT ALREADY WON &nbsp;***&nbsp; EVERY CLAIM CITED &nbsp;***&nbsp; EVERY ACTION AUDITED &nbsp;***&nbsp; NO NARRATION WITHOUT SUBSTRATE &nbsp;***&nbsp; THIS IS WHAT POLSIA FORGOT &nbsp;***&nbsp; WE WILL NOT FORGET &nbsp;***&nbsp; GREETS FLY OUT TO MARK KASHEF FOR CONVENING THE TRIBE &nbsp;***&nbsp; AND TO ALL WHO FLY IN BY TRAIN &nbsp;***&nbsp; SCENE TRADITIONS REMEMBERED: FAIRLIGHT FUTURE-CREW FARBRAUSCH &nbsp;***&nbsp; THE BEAR IN THE NAME IS THE BEAR ON THE FLAG &nbsp;***&nbsp; THE ART OF VERIFIABLE AUTONOMY IS THE ART OF REFUSING TO SAY MORE THAN YOU CAN PROVE &nbsp;***&nbsp; WATCH THE GLYPHS NEXT WEEK &nbsp;***&nbsp; WATCH THE UMLAUT &nbsp;***&nbsp; BÄRLIN WILL BECOME BERLIN WHEN WE ARRIVE &nbsp;***&nbsp; UNTIL THEN &nbsp;***&nbsp; KEEP GREPPING &nbsp;***&nbsp; &nbsp;***&nbsp;
+  </div>
+</div>
+
+<script>
+  // Mid-80s cracktro: a single rotating audit line. Real B-1 substrate
+  // shape — interview-log.jsonl rows. Static content; W2 will fetch live.
+  const lines = [
+    "[2026-05-19T20:18:49Z] action=mode_initialized agent=b1-customer-interviewer to_mode=step authorized_by=operator",
+    "[2026-05-18T21:41:04Z] action=draft_emitted prospect=prospect-0001 icp_phrases_cited=3 send_authorized=false",
+    "[2026-05-19T20:06:35Z] action=marked_sent prospect=prospect-0003 channel=IH-DM",
+    "[2026-05-20T22:56:00Z] action=falsifier_clean campaign=cohort-1 cross_op_review=pending",
+    "[2026-05-20T22:56:00Z] action=surface_compliance_check icp_citations=3 verbatim=true em_dash_free=true",
+  ];
+  let i = 0;
+  const el = document.getElementById("audit-content");
+  setInterval(() => {
+    i = (i + 1) % lines.length;
+    el.textContent = lines[i];
+  }, 2400);
+</script>
+
+</body>
+</html>
